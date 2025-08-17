@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamiltonyan8のホームページ</title>
+    <title>Hamiltonyan8の数学ノート</title>
+    <!-- MathJax設定 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif;
@@ -12,37 +15,112 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            color: #333;
         }
         header {
             text-align: center;
             margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
         h1 {
-            color: #333;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #3498db;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .article-list {
+            margin-top: 30px;
+        }
+        .article-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        .article-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .article-date {
+            font-size: 0.8em;
+            color: #7f8c8d;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .category {
+            background: #f1f1f1;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .category:hover {
+            background: #e1e1e1;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .math-example {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>私のGitHub Pagesウェブサイトへようこそ</h1>
+        <h1>Hamiltonyan8の数学ノート</h1>
+        <p>数学の美しさを探求するブログ</p>
     </header>
+
+    <div class="categories">
+        <div class="category">代数学</div>
+        <div class="category">幾何学</div>
+        <div class="category">解析学</div>
+        <div class="category">確率・統計</div>
+        <div class="category">数論</div>
+    </div>
+
     <main>
         <section>
-            <h2>自己紹介</h2>
-            <p>こんにちは！これはGitHub Pagesでホストされている私の個人ウェブサイトです。</p>
+            <h2>サイトについて</h2>
+            <p>このサイトでは、私が勉強した数学の内容や興味深い定理・問題について記事を公開していきます。</p>
+            
+            <div class="math-example">
+                <p>数式表示のテスト:</p>
+                <p>二次方程式の解の公式: \(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+                <p>ガウス積分: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$</p>
+                <p>オイラーの恒等式: $$e^{i\pi} + 1 = 0$$</p>
+            </div>
         </section>
-        <section>
-            <h2>プロジェクト</h2>
-            <p>以下は私のプロジェクト一覧です：</p>
-            <ul>
-                <li>プロジェクト1</li>
-                <li>プロジェクト2</li>
-                <li>プロジェクト3</li>
-            </ul>
+
+        <section class="article-list">
+            <h2>最新の記事</h2>
+            <div class="article-item">
+                <div class="article-title"><a href="articles/sample.html">フェルマーの最終定理とその歴史</a></div>
+                <div class="article-date">2025年8月17日</div>
+                <p>フェルマーの最終定理が解決されるまでの350年に渡る数学者たちの挑戦の歴史を紹介します。</p>
+            </div>
+            
+            <div class="article-item">
+                <div class="article-title"><a href="articles/sample2.html">複素数と複素平面</a></div>
+                <div class="article-date">2025年8月10日</div>
+                <p>複素数の幾何学的解釈と複素平面上での操作について解説します。</p>
+            </div>
         </section>
     </main>
+    
     <footer>
-        <p>© 2025 Hamiltonyan8</p>
+        <p>© 2025 Hamiltonyan8 - 数学ノート</p>
     </footer>
 </body>
 </html>
