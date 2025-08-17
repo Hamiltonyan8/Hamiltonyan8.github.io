@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamiltonyan8の数学ノート</title>
-    <!-- MathJax設定 -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Hamiltonyan8の数学資料集</title>
     <style>
         body {
             font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif;
@@ -19,48 +16,29 @@
         }
         header {
             text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
             padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
         h1 {
             color: #2c3e50;
         }
-        h2 {
-            color: #3498db;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
-        }
-        .article-list {
+        .pdf-list {
             margin-top: 30px;
         }
-        .article-item {
-            margin-bottom: 25px;
+        .pdf-item {
+            margin-bottom: 15px;
             padding-bottom: 15px;
             border-bottom: 1px dashed #eee;
         }
-        .article-title {
-            font-size: 1.2em;
-            margin-bottom: 5px;
+        .pdf-title {
+            font-size: 1.1em;
+            font-weight: bold;
         }
-        .article-date {
-            font-size: 0.8em;
-            color: #7f8c8d;
-        }
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-        .category {
-            background: #f1f1f1;
-            margin: 5px;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .category:hover {
-            background: #e1e1e1;
+        .pdf-description {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
         }
         footer {
             margin-top: 50px;
@@ -68,59 +46,45 @@
             font-size: 0.9em;
             color: #7f8c8d;
         }
-        .math-example {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Hamiltonyan8の数学ノート</h1>
-        <p>数学の美しさを探求するブログ</p>
+        <h1>Hamiltonyan8の数学資料集</h1>
+        <p>数学に関するPDF資料を公開しています</p>
     </header>
 
-    <div class="categories">
-        <div class="category">代数学</div>
-        <div class="category">幾何学</div>
-        <div class="category">解析学</div>
-        <div class="category">確率・統計</div>
-        <div class="category">数論</div>
-    </div>
-
     <main>
-        <section>
-            <h2>サイトについて</h2>
-            <p>このサイトでは、私が勉強した数学の内容や興味深い定理・問題について記事を公開していきます。</p>
-            
-            <div class="math-example">
-                <p>数式表示のテスト:</p>
-                <p>二次方程式の解の公式: \(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
-                <p>ガウス積分: $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$</p>
-                <p>オイラーの恒等式: $$e^{i\pi} + 1 = 0$$</p>
-            </div>
-        </section>
-
-        <section class="article-list">
-            <h2>最新の記事</h2>
-            <div class="article-item">
-                <div class="article-title"><a href="articles/sample.html">フェルマーの最終定理とその歴史</a></div>
-                <div class="article-date">2025年8月17日</div>
-                <p>フェルマーの最終定理が解決されるまでの350年に渡る数学者たちの挑戦の歴史を紹介します。</p>
+        <div class="pdf-list">
+            <!-- PDFへのリンク例 -->
+            <div class="pdf-item">
+                <div class="pdf-title"><a href="pdfs/sample1.pdf">微分方程式の基礎</a></div>
+                <div class="pdf-description">常微分方程式の解法と応用例について解説しています。</div>
             </div>
             
-            <div class="article-item">
-                <div class="article-title"><a href="articles/sample2.html">複素数と複素平面</a></div>
-                <div class="article-date">2025年8月10日</div>
-                <p>複素数の幾何学的解釈と複素平面上での操作について解説します。</p>
+            <div class="pdf-item">
+                <div class="pdf-title"><a href="pdfs/sample2.pdf">線形代数学入門</a></div>
+                <div class="pdf-description">ベクトル空間と線形変換の基本概念について説明しています。</div>
             </div>
-        </section>
+            
+            <div class="pdf-item">
+                <div class="pdf-title"><a href="pdfs/sample3.pdf">群論の基礎</a></div>
+                <div class="pdf-description">抽象代数学における群の定義と性質についてまとめています。</div>
+            </div>
+            
+            <!-- 必要に応じてリンクを追加 -->
+        </div>
     </main>
     
     <footer>
-        <p>© 2025 Hamiltonyan8 - 数学ノート</p>
+        <p>© 2025 Hamiltonyan8</p>
     </footer>
 </body>
 </html>
