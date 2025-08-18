@@ -15,13 +15,31 @@
             color: #333;
         }
         header {
-            text-align: center;
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
+            /* フレックスボックスでヘッダーを横並びに */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-content {
+            flex-grow: 1;
+            text-align: center;
+            padding: 0 15px;
+        }
+        /* 猫のGIF画像のスタイル */
+        .cat-gif {
+            width: 70px;
+            height: auto;
+        }
+        /* 左側の猫 */
+        .cat-left {
+            transform: scaleX(-1); /* 必要に応じて左右反転 */
         }
         h1 {
             color: #2c3e50;
+            margin-top: 0;
         }
         .pdf-list {
             margin-top: 30px;
@@ -42,27 +60,9 @@
         }
         footer {
             margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            /* フッターをフレックスボックスで配置 */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .footer-content {
             text-align: center;
-            flex-grow: 1;
-            color: #7f8c8d;
             font-size: 0.9em;
-        }
-        /* 猫のGIF画像のスタイル */
-        .cat-gif {
-            width: 70px;
-            height: auto;
-        }
-        /* 左側の猫 */
-        .cat-left {
-            transform: scaleX(-1); /* 左右反転 */
+            color: #7f8c8d;
         }
         a {
             color: #3498db;
@@ -75,15 +75,24 @@
         /* レスポンシブ対応 */
         @media (max-width: 600px) {
             .cat-gif {
-                width: 50px;
+                width: 50px; /* 小さい画面では猫を小さく */
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Hamiltonyan8の数学資料集</h1>
-        <p>数学に関するPDF資料を公開しています</p>
+        <!-- 左側の猫GIF -->
+        <img src="images/math-cat-left.gif" alt="左側の数学する猫" class="cat-gif cat-left">
+        
+        <!-- ヘッダーのタイトル部分 -->
+        <div class="header-content">
+            <h1>Hamiltonyan8の数学資料集</h1>
+            <p>数学に関するPDF資料を公開しています</p>
+        </div>
+        
+        <!-- 右側の猫GIF -->
+        <img src="images/math-cat-right.gif" alt="右側の数学する猫" class="cat-gif">
     </header>
 
     <main>
@@ -103,20 +112,13 @@
                 <div class="pdf-title"><a href="pdfs/sample3.pdf">群論の基礎</a></div>
                 <div class="pdf-description">抽象代数学における群の定義と性質についてまとめています。</div>
             </div>
+            
+            <!-- 必要に応じてリンクを追加 -->
         </div>
     </main>
     
     <footer>
-        <!-- 左側の猫GIF -->
-        <img src="images/math-cat-left.gif" alt="左側の数学する猫" class="cat-gif cat-left">
-        
-        <!-- フッターのコンテンツ -->
-        <div class="footer-content">
-            <p>© 2025 Hamiltonyan8</p>
-        </div>
-        
-        <!-- 右側の猫GIF -->
-        <img src="images/math-cat-right.gif" alt="右側の数学する猫" class="cat-gif">
+        <p>© 2025 Hamiltonyan8</p>
     </footer>
 </body>
 </html>
